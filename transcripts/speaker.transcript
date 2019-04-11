@@ -1,0 +1,179 @@
+[
+  {
+    "conversation": {
+      "id": "/SijFyrhxiAmmpJVBuf260FiPaw="
+    },
+    "id": "1",
+    "timestamp": "2019-04-04T15:15:54.100Z",
+    "type": "conversationUpdate",
+    "channelId": "chatdown",
+    "membersAdded": [
+      {
+        "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+        "name": "mytestbot",
+        "role": "bot"
+      }
+    ],
+    "membersRemoved": []
+  },
+  {
+    "conversation": {
+      "id": "/SijFyrhxiAmmpJVBuf260FiPaw="
+    },
+    "id": "2",
+    "recipient": {
+      "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+      "name": "mytestbot",
+      "role": "bot"
+    },
+    "from": {
+      "id": "5ZEn4nUv/BEmgBdirke48+llDr4=",
+      "name": "Reynold",
+      "role": "user"
+    },
+    "text": "Who is speaking about bots?",
+    "timestamp": "2019-04-04T15:15:56.100Z",
+    "type": "message",
+    "channelId": "chatdown"
+  },
+  {
+    "attachments": [
+      {
+        "contentType": "application/vnd.microsoft.card.hero",
+        "content": {
+          "buttons": [
+            {
+              "title": "Add to List",
+              "type": "imBack",
+              "value": "Add to List"
+            },
+            {
+              "title": "Learn More",
+              "type": "imBack",
+              "value": "Learn More"
+            }
+          ],
+          "title": "Micheal Szul",
+          "subtitle": "UVA, School of Medicine",
+          "text": "Join Micheal Szul in Rehersal A for his discussion on building bots with the Microsoft Bot Framework.",
+          "images": [
+            {
+              "url": "https://www.eduiconf.org/wp-content/uploads/sites/7/2018/03/headshot-150x150.jpg"
+            }
+          ]
+        }
+      }
+    ],
+    "conversation": {
+      "id": "/SijFyrhxiAmmpJVBuf260FiPaw="
+    },
+    "id": "3",
+    "recipient": {
+      "id": "5ZEn4nUv/BEmgBdirke48+llDr4=",
+      "name": "Reynold",
+      "role": "user"
+    },
+    "from": {
+      "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+      "name": "mytestbot",
+      "role": "bot"
+    },
+    "text": "",
+    "timestamp": "2019-04-04T15:15:58.100Z",
+    "type": "message",
+    "channelId": "chatdown"
+  },
+  {
+    "conversation": {
+      "id": "/SijFyrhxiAmmpJVBuf260FiPaw="
+    },
+    "id": "4",
+    "recipient": {
+      "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+      "name": "mytestbot",
+      "role": "bot"
+    },
+    "from": {
+      "id": "5ZEn4nUv/BEmgBdirke48+llDr4=",
+      "name": "Reynold",
+      "role": "user"
+    },
+    "text": "Who is speaking on mobile developement?",
+    "timestamp": "2019-04-04T15:16:00.100Z",
+    "type": "message",
+    "channelId": "chatdown",
+    "attachmentLayout": "carousel"
+  },
+  {
+    "attachments": [
+      {
+        "contentType": "application/vnd.microsoft.card.hero",
+        "content": {
+          "buttons": [
+            {
+              "title": "Add to List",
+              "type": "imBack",
+              "value": "Add to List"
+            },
+            {
+              "title": "Learn More",
+              "type": "imBack",
+              "value": "Learn More"
+            }
+          ],
+          "title": "Robert L. Taylor Jr.",
+          "subtitle": "SentryOne",
+          "text": "THe Objective of this workshop is to teach you how to use Xamarin Forms to create cross platform solutions.",
+          "images": [
+            {
+              "url": "https://2018.syntaxcon.com/wp-content/uploads/sites/5/2017/05/richard-taylor-1.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "contentType": "application/vnd.microsoft.card.hero",
+        "content": {
+          "buttons": [
+            {
+              "title": "Add to List",
+              "type": "imBack",
+              "value": "Add to List"
+            },
+            {
+              "title": "Learn More",
+              "type": "imBack",
+              "value": "Learn More"
+            }
+          ],
+          "title": "Anish Pathak",
+          "subtitle": "UVA, School Of Medicine",
+          "text": "Learn about how the UVA, School of Medicine is using PWAs to continue to enhance student experience",
+          "images": [
+            {
+              "url": "https://edui2017.virginiahumanities.org/wp-content/uploads/sites/42/2017/04/1dc4f10-1.jpg"
+            }
+          ]
+        }
+      }
+    ],
+    "conversation": {
+      "id": "/SijFyrhxiAmmpJVBuf260FiPaw="
+    },
+    "id": "5",
+    "recipient": {
+      "id": "5ZEn4nUv/BEmgBdirke48+llDr4=",
+      "name": "Reynold",
+      "role": "user"
+    },
+    "from": {
+      "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+      "name": "mytestbot",
+      "role": "bot"
+    },
+    "text": "",
+    "timestamp": "2019-04-04T15:16:02.100Z",
+    "type": "message",
+    "channelId": "chatdown"
+  }
+]

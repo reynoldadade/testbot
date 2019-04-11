@@ -1,0 +1,119 @@
+[
+  {
+    "conversation": {
+      "id": "D3BgelYUUh2BonrfmOQv09Frgp4="
+    },
+    "id": "1",
+    "timestamp": "2019-04-04T15:08:15.100Z",
+    "type": "conversationUpdate",
+    "channelId": "chatdown",
+    "membersAdded": [
+      {
+        "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+        "name": "mytestbot",
+        "role": "bot"
+      }
+    ],
+    "membersRemoved": []
+  },
+  {
+    "conversation": {
+      "id": "D3BgelYUUh2BonrfmOQv09Frgp4="
+    },
+    "id": "2",
+    "recipient": {
+      "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+      "name": "mytestbot",
+      "role": "bot"
+    },
+    "from": {
+      "id": "5ZEn4nUv/BEmgBdirke48+llDr4=",
+      "name": "Reynold",
+      "role": "user"
+    },
+    "text": "Hello",
+    "timestamp": "2019-04-04T15:08:17.100Z",
+    "type": "message",
+    "channelId": "chatdown"
+  },
+  {
+    "conversation": {
+      "id": "D3BgelYUUh2BonrfmOQv09Frgp4="
+    },
+    "id": "3",
+    "recipient": {
+      "id": "5ZEn4nUv/BEmgBdirke48+llDr4=",
+      "name": "Reynold",
+      "role": "user"
+    },
+    "from": {
+      "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+      "name": "mytestbot",
+      "role": "bot"
+    },
+    "text": "Hello! What would you like me to  call you?",
+    "timestamp": "2019-04-04T15:08:19.100Z",
+    "type": "message",
+    "channelId": "chatdown"
+  },
+  {
+    "conversation": {
+      "id": "D3BgelYUUh2BonrfmOQv09Frgp4="
+    },
+    "id": "4",
+    "recipient": {
+      "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+      "name": "mytestbot",
+      "role": "bot"
+    },
+    "from": {
+      "id": "5ZEn4nUv/BEmgBdirke48+llDr4=",
+      "name": "Reynold",
+      "role": "user"
+    },
+    "text": "Reynold",
+    "timestamp": "2019-04-04T15:08:21.100Z",
+    "type": "message",
+    "channelId": "chatdown"
+  },
+  {
+    "conversation": {
+      "id": "D3BgelYUUh2BonrfmOQv09Frgp4="
+    },
+    "id": "5",
+    "recipient": {
+      "id": "5ZEn4nUv/BEmgBdirke48+llDr4=",
+      "name": "Reynold",
+      "role": "user"
+    },
+    "from": {
+      "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+      "name": "mytestbot",
+      "role": "bot"
+    },
+    "text": "Hello, Reynold. Here are some examples I can help you with:\r\n* Are there any talks on Bot Framework?\r\n* When is Micheal Szul Speaking?\r\n* Where can i Hear the Typescript talk?",
+    "timestamp": "2019-04-04T15:08:23.100Z",
+    "type": "message",
+    "channelId": "chatdown"
+  },
+  {
+    "conversation": {
+      "id": "D3BgelYUUh2BonrfmOQv09Frgp4="
+    },
+    "id": "6",
+    "recipient": {
+      "id": "5ZEn4nUv/BEmgBdirke48+llDr4=",
+      "name": "Reynold",
+      "role": "user"
+    },
+    "from": {
+      "id": "AlpOUJFbfHxJ5e2kUsWVoZplBQA=",
+      "name": "mytestbot",
+      "role": "bot"
+    },
+    "text": "Just type in whatever you need! If you get stuck, just type \"help\" ad I'll do what I can.",
+    "timestamp": "2019-04-04T15:08:25.100Z",
+    "type": "message",
+    "channelId": "chatdown"
+  }
+]

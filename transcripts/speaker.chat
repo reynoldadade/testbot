@@ -1,0 +1,26 @@
+user=Reynold
+bot=mytestbot
+
+user: Who is speaking about bots?
+bot: [Herocard
+    title=Micheal Szul
+    subtitle=UVA, School of Medicine
+    text=Join Micheal Szul in Rehersal A for his discussion on building bots with the Microsoft Bot Framework.
+    images=https://www.eduiconf.org/wp-content/uploads/sites/7/2018/03/headshot-150x150.jpg
+    buttons=Add to List|Learn More]
+
+user: Who is speaking on mobile developement?
+[AttachmentLayout=carousel]
+bot: [Herocard
+        title=Robert L. Taylor Jr.
+        subtitle=SentryOne
+        text=THe Objective of this workshop is to teach you how to use Xamarin Forms to create cross platform solutions.
+        images=https://2018.syntaxcon.com/wp-content/uploads/sites/5/2017/05/richard-taylor-1.jpg
+        buttons=Add to List|Learn More]
+     [Herocard
+        title=Anish Pathak
+        subtitle=UVA, School Of Medicine
+        text=Learn about how the UVA, School of Medicine is using PWAs to continue to enhance student experience
+        images=https://edui2017.virginiahumanities.org/wp-content/uploads/sites/42/2017/04/1dc4f10-1.jpg
+        buttons=Add to List|Learn More]
+

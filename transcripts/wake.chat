@@ -1,0 +1,13 @@
+user=Reynold
+bot=mytestbot
+
+user: Hello
+bot: Hello! What would you like me to  call you?
+
+user: Reynold
+bot: Hello, Reynold. Here are some examples I can help you with:
+* Are there any talks on Bot Framework?
+* When is Micheal Szul Speaking?
+* Where can i Hear the Typescript talk?
+
+bot: Just type in whatever you need! If you get stuck, just type "help" ad I'll do what I can.

@@ -1,0 +1,397 @@
+{
+  "intents": [
+    {
+      "name": "Speaker"
+    },
+    {
+      "name": "Location"
+    },
+    {
+      "name": "Time"
+    },
+    {
+      "name": "Topic"
+    }
+  ],
+  "entities": [
+    {
+      "name": "subject",
+      "roles": []
+    },
+    {
+      "name": "location",
+      "roles": []
+    },
+    {
+      "name": "person",
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "regex_entities": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "who is speaking about bots",
+      "intent": "Speaker",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 22,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "who is giving the keynote",
+      "intent": "Speaker",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "who is speaking in the rehersal room",
+      "intent": "Speaker",
+      "entities": [
+        {
+          "entity": "location",
+          "startPos": 23,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "Where is reynold's workshop",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "person",
+          "startPos": 9,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "Where is reynold talking",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "person",
+          "startPos": 9,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "What location is the keynote",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 21,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "Where can i find the bot talk",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 21,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "Where is the xamarin workshop",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 13,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "Where is reynold talking",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "person",
+          "startPos": 9,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "Where is the keynote",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 13,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "Where is the bot talk",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 13,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "Where is reynold speaking",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "person",
+          "startPos": 9,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "What time is reynold's presentation",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "person",
+          "startPos": 13,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "When is the presentation by reynold",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "person",
+          "startPos": 28,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "When is micheal's presentation",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "person",
+          "startPos": 8,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "When is the xamarin workshop",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 12,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "When is the bot talk",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 12,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "What time is the bot talk",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 17,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "What time is the xamarin workshop",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "What time is the bot presentation",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 17,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "What time is the workshop on xamarin",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 29,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "What time is the presentation on xamarin",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 33,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "Is there a bot presentation",
+      "intent": "Topic",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 11,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "Is there a bot talk",
+      "intent": "Topic",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 11,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "are there any presentations about bots",
+      "intent": "Topic",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 34,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "Are there any workshops on xamarin",
+      "intent": "Topic",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 27,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "are there any talks on bots",
+      "intent": "Topic",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 23,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "what is reynold talking about",
+      "intent": "Topic",
+      "entities": [
+        {
+          "entity": "person",
+          "startPos": 8,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "what is reynold speaking about",
+      "intent": "Topic",
+      "entities": [
+        {
+          "entity": "person",
+          "startPos": 8,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "are there any bot presentations",
+      "intent": "Topic",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 14,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "are there any bot workshops",
+      "intent": "Topic",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 14,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "are there any bot talks",
+      "intent": "Topic",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 14,
+          "endPos": 16
+        }
+      ]
+    }
+  ],
+  "patterns": [],
+  "patternAnyEntities": [],
+  "prebuiltEntities": [],
+  "luis_schema_version": "3.0.0",
+  "versionId": "0.1",
+  "name": "mytestbot",
+  "desc": "",
+  "culture": "en-us"
+}

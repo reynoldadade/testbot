@@ -1,0 +1,36 @@
+{
+    "name": "mytestbot",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "name": "mytestbot",
+            "endpoint": "http://localhost:3978/api/messages",
+            "appId": "",
+            "appPassword": "",
+            "id": "104"
+        },
+        {
+            "type": "qna",
+            "name": "qnaMakerBot",
+            "kbId": "be840587-bab6-462d-a094-0bfb696fa3df",
+            "subscriptionKey": "Vwv3vXSeU/8klhq/42YsIQ==!I2SS/z/WMfqfcmhjTKjHLdVvbJWgLzMuuD4+vmhviSwzjz2ilXx55YiRgtXIwBOs",
+            "endpointKey": "2fbfWhqKeU29kRnl2CMxyg==!QMDQaKb/MKac0/neNwkILCFeaoQotoh1Gk546MPnK8Mh8DbEKkaSZvxkarBmhDQU",
+            "hostname": "https://reynoldtestbot.azurewebsites.net/qnamaker",
+            "id": "164"
+        },
+        {
+            "type": "luis",
+            "name": "luisBot",
+            "appId": "eb645af3-08f5-4988-9573-f6a0f5b1181d",
+            "version": "'0.1'",
+            "authoringKey": "oLfLN6SxZEs0lcXgpnNnhQ==!T2bHoBNYaUWTiggrqXwrew+gQRs+auYOXERkEt87PkRlnDfRYVI9aBSOBacDvuGl",
+            "subscriptionKey": "2xrIeO9wBM0y7VLQwJS7XA==!GdRFG2ppaxvb2ic8S4Zm6nJYxJc492KN5FJhmGnAx6SL20nkt76cVp/O5+5X4UlU",
+            "region": "westus",
+            "endPoint": "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/eb645af3-08f5-4988-9573-f6a0f5b1181d?verbose=true&timezoneOffset=-360&subscription-key=ecff1873392a4df580334c1a5b26e882&q=",
+            "id": "42"
+        }
+    ],
+    "padlock": "8CXW3rAK310Hgzb3RNexqQ==!40kAYqASbZdlvV15nrF7xe8YLKIW0yhSe2+qRuGOAYyqNCMIuGmPfdIK64V7Aj9C",
+    "version": "2.0"
+}
