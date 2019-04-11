@@ -3,6 +3,9 @@
 
 import { ActivityTypes, TurnContext } from 'botbuilder';
 import {LuisRecognizer, QnAMaker, QnAMakerResult} from 'botbuilder-ai';
+import {createCarousel, createHeroCard} from './cards';
+import {ISpeakerSession} from './types';
+import {getData} from './parser';
 
 export class MyBot {
     private qnaMaker: QnAMaker;
@@ -21,17 +24,32 @@ export class MyBot {
             // fixed
             const qnaResult: QnAMakerResult[] = await this.qnaMaker.getAnswers(turnContext);
             // console.log('qnaResults', qnaResult);
-
-            // test query const qnaResults = [{answer: 'testme'}]
             if (qnaResult.length > 0) {
                 await turnContext.sendActivity(qnaResult[0].answer);
             } else {
                 await this.luisRecognizer.recognize(turnContext).then((res) => {
                     const top = LuisRecognizer.topIntent(res);
-                    turnContext.sendActivity(`The top intent found was ${top}`)
-                        .then((response) => console.log(response),
-                            (error) => console.log(error));
+                    let data: ISpeakerSession[];
+                    switch (top) {
+                        case 'Speaker':
+                        case 'Location':
+                        case 'Time':
+                        case 'Topic':
+                            data = getData(res.entities);
+                            if (data.length > 1) {
+                                console.log(createCarousel(data, top));
+                                break;
+                            } else if (data.length === 1) {
+                                console.log(createHeroCard(data[0], top));
+                                break;
+                            }
+                        default:
+                            turnContext.sendActivity(`No way to handle ${top}`).then((response) => console.log(response));
+                            break;
+
+                    }
                 });
+
             }
         }
 
