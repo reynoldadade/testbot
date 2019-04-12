@@ -1,3 +1,5 @@
+export const LINGO: string[] = ['Also', 'In Addition', 'Additionally', 'Likewise'];
+
 export interface ISpeakerImage {
     type: string;
     link: string;
@@ -16,4 +18,3 @@ export interface ISpeakerSession {
     type: string;
     images?: ISpeakerImage[];
 }
-

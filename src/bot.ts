@@ -5,8 +5,10 @@ import { ActivityTypes, ConversationState, TurnContext } from 'botbuilder';
 import {LuisRecognizer, QnAMaker, QnAMakerResult} from 'botbuilder-ai';
 import { ChoicePrompt, DialogSet, PromptOptions , WaterfallDialog, WaterfallStepContext} from 'botbuilder-dialogs';
 import {createCarousel, createHeroCard} from './cards';
+import {getTime} from './dialogs';
 import {getData} from './parser';
 import {ISpeakerSession} from './types';
+import { setPriority } from 'os';
 
 export class MyBot {
     private qnaMaker: QnAMaker;
@@ -39,6 +41,7 @@ export class MyBot {
                     const top = LuisRecognizer.topIntent(res);
                     const data: ISpeakerSession[] = getData(res.entities);
                     if (top === 'Time') {
+                        dc.beginDialog('time', data)
                         //
                     } else if (data.length > 1) {
                         turnContext.sendActivity(createCarousel(data, top)).then((success) => {
@@ -103,5 +106,12 @@ export class MyBot {
             },
         ]));
         this.dialogs.add(new ChoicePrompt('choicePrompt'));
+
+        this.dialogs.add(new WaterfallDialog('time', [
+            async (step: WaterfallStepContext) => {
+                await step.context.sendActivity(getTime(step.activeDialog.state.options));
+                return await step.endDialog()
+            },
+        ]));
     }
 }
