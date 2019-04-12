@@ -1,13 +1,12 @@
-import { Activity } from 'botbuilder';
-import {ISpeakerSession, LINGO} from './types';
 
+import {ISpeakerSession, LINGO} from './types';
 
 function getRandom(min, max): number {
     return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
 }
 
-export function getTime(data: ISpeakerSession[]): Partial<ActivTity>[] {
-    let messages: any = [];
+export function getTime(data: ISpeakerSession[]): any {
+    const messages: any = [];
     data.forEach( (element, index) => {
         let message = ' ';
         if (index !== 0) {

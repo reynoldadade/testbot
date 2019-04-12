@@ -8,7 +8,6 @@ import {createCarousel, createHeroCard} from './cards';
 import {getTime} from './dialogs';
 import {getData} from './parser';
 import {ISpeakerSession} from './types';
-import { setPriority } from 'os';
 
 export class MyBot {
     private qnaMaker: QnAMaker;
@@ -35,28 +34,31 @@ export class MyBot {
             // console.log('turn context',turnContext)
             // fixed
             const qnaResult: QnAMakerResult[] = await this.qnaMaker.getAnswers(turnContext);
-            // console.log('qnaResults', qnaResult);
-            if (qnaResult.length <= 0) {
+            console.log('qnaResults', qnaResult);
+            if (qnaResult.length > 0) {
+                await turnContext.sendActivity(qnaResult[0].answer);
+                console.log('still giving results for qna');
+            } else {
                 await this.luisRecognizer.recognize(turnContext).then((res) => {
                     const top = LuisRecognizer.topIntent(res);
                     const data: ISpeakerSession[] = getData(res.entities);
                     if (top === 'Time') {
                         dc.beginDialog('time', data)
+                            .then( (dialogTurnResults) => console.log('time results', dialogTurnResults),
+                                (reason) => console.log('time errors', reason));
                         //
                     } else if (data.length > 1) {
                         turnContext.sendActivity(createCarousel(data, top)).then((success) => {
-                            console.log(success);
-                        }, (rejected) => console.log(rejected));
+                            console.log('create carousel success', success);
+                        }, (rejected) => console.log('create carousel rejected', rejected));
                     } else if (data.length === 1) {
                         turnContext.sendActivity({attachments: [createHeroCard(data[0], top)]}).then((success) => {
-                            console.log(success);
-                        }, (rejected) => console.log(rejected));
+                            console.log('create hero success' , success);
+                        }, (rejected) => console.log('create hero rejected', rejected));
                     }
 
                 });
 
-            } else {
-                await turnContext.sendActivity(qnaResult[0].answer);
             }
         } else {
             // see https://aka.ms/about-bot-activity-message to learn more about the message and other activity types
@@ -73,7 +75,7 @@ export class MyBot {
                     , 'I want to know about a speaker'
                     , 'I want to know about a venue'];
                 const options: PromptOptions = {
-                    choices: choices,
+                    choices,
                     prompt: 'What would you like to know?',
 
                 };
@@ -109,8 +111,8 @@ export class MyBot {
 
         this.dialogs.add(new WaterfallDialog('time', [
             async (step: WaterfallStepContext) => {
-                await step.context.sendActivity(getTime(step.activeDialog.state.options));
-                return await step.endDialog()
+                await step.context.sendActivities(getTime(step.activeDialog.state.options));
+                return await step.endDialog();
             },
         ]));
     }
