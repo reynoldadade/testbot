@@ -1,0 +1,11 @@
+
+ {
+  "type": "qna",
+  "name": "mytestbot",
+  "kbId": "be840587-bab6-462d-a094-0bfb696fa3df",
+  "subscriptionKey": "0a7557722198456d8b48a29602e07eb5",
+  "endpointKey": "2df2742b-10c4-41d4-906c-878109049433",
+  "hostname": "https://reynoldtestbot.azurewebsites.net/qnamaker",
+  "id": "188"
+}
+

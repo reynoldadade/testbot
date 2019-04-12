@@ -2,9 +2,12 @@
 // Licensed under the MIT License.
 // Import required bot services.
 // See https://aka.ms/bot-services to learn more about the different parts of a bot.
-import { BotFrameworkAdapter} from 'botbuilder';
+import { BotFrameworkAdapter, ConversationState, MemoryStorage} from 'botbuilder';
 // Import Botbuilder-ai after installation
 import {LuisRecognizer, QnAMaker} from 'botbuilder-ai';
+
+//  import dialog-set from bot builder dialogs
+import { DialogSet } from 'botbuilder-dialogs';
 //  Import QnAI service
 import {BotConfiguration, ILuisService, IQnAService} from 'botframework-config';
 // Import dotenv for config
@@ -12,10 +15,12 @@ import {config} from 'dotenv';
 import * as restify from 'restify';
 // This bot's main dialog.
 import { MyBot } from './bot';
-
+// loading configuration
 config();
 
 const botConfig = BotConfiguration.loadSync('./mytestbot.bot', process.env.botFileSecret);
+const conversationState = new ConversationState(new MemoryStorage());
+const dialogs = new DialogSet(conversationState.createProperty('dialogState'));
 
 // Create HTTP server.
 const server = restify.createServer();
@@ -53,7 +58,7 @@ adapter.onTurnError = async (context, error) => {
 };
 
 //  Create the main dialog.
-const myBot: MyBot = new MyBot(qnaMaker, luisRecognizer);
+const myBot: MyBot = new MyBot(qnaMaker, luisRecognizer, dialogs);
 
 // Listen for incoming requests.
 server.post('/api/messages', (req, res) => {
