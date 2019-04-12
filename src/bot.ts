@@ -19,6 +19,7 @@ export class MyBot {
         this.luisRecognizer = luisRecognizer;
         this.dialogs = dialogs;
         this.conversationState = conversationState;
+        this.addDialogs();
     }
     public async onTurn(turnContext: TurnContext) {
         //  catch dialog giving to bot
@@ -26,6 +27,7 @@ export class MyBot {
         // wait till dialog is done and continue dialog so that dialog does not begin again
         await dc.continueDialog();
         if (turnContext.activity.text != null && turnContext.activity.text === 'help') {
+            await dc.beginDialog('help');
         }
         if (turnContext.activity.type === ActivityTypes.Message) {
             // console.log('turn context',turnContext)
@@ -59,5 +61,47 @@ export class MyBot {
         }
         await this.conversationState.saveChanges(turnContext);
 
+    }
+
+    private addDialogs(): void {
+        this.dialogs.add(new WaterfallDialog('help', [
+            async (step: WaterfallStepContext) => {
+                const choices = ['I want to know about a topic'
+                    , 'I want to know about a speaker'
+                    , 'I want to know about a venue'];
+                const options: PromptOptions = {
+                    choices: choices,
+                    prompt: 'What would you like to know?',
+
+                };
+                return await step.prompt('choicePrompt', options);
+            },
+            async (step: WaterfallStepContext) => {
+                switch (step.result.index) {
+                    case 0:
+                        await step.context.sendActivity(`You can ask:
+                            * _Is there a chatbot presentation?_
+                            * _What is Michael Szul speaking about?_
+                            * _Are there any Xamarin talks?_`);
+                        break;
+                    case 1:
+                        await step.context.sendActivity(`You can ask:
+                            * _Who is speaking about bots?_
+                            * _Where is giving the Bot Framework talk?_
+                            * _Who is speaking Rehearsal A?_`);
+                        break;
+                    case 2:
+                        await step.context.sendActivity(`You can ask:
+                            * _Where is Michael Szul talking?_
+                            * _Where is the Bot Framework talk?_
+                            * _What time is the Bot Framework talk?_`);
+                        break;
+                    default:
+                        break;
+                }
+                return await step.endDialog();
+            },
+        ]));
+        this.dialogs.add(new ChoicePrompt('choicePrompt'));
     }
 }

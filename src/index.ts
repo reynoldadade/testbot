@@ -58,7 +58,7 @@ adapter.onTurnError = async (context, error) => {
 };
 
 //  Create the main dialog.
-const myBot: MyBot = new MyBot(qnaMaker, luisRecognizer, dialogs);
+const myBot: MyBot = new MyBot(qnaMaker, luisRecognizer, dialogs, conversationState);
 
 // Listen for incoming requests.
 server.post('/api/messages', (req, res) => {
